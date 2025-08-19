@@ -28,12 +28,12 @@ def arrayGen(n):
     return array
 
 def runSorts():
-    A30, A100, A1000 = arrayGen(30), arrayGen(100), arrayGen(1000)
-    n1, n2, n3 = len(A30), len(A100), len(A1000)
+    A10, A100, A1000 = arrayGen(30), arrayGen(100), arrayGen(1000)
+    n1, n2, n3 = len(A10), len(A100), len(A1000)
 
-    print("Odd-Even Sort Array size 30 \n disarranged array: \n", A30)
+    print("Odd-Even Sort Array size 30 \n disarranged array: \n", A10)
     inicio1 = time.perf_counter()
-    ar30 = oddEvenSort(A30,n1)
+    ar30 = oddEvenSort(A10,n1)
     fin1 = time.perf_counter()
     print("sorted array: \n", ar30)
 
@@ -56,23 +56,23 @@ def runSorts():
     print("Size 1000 array was sorted in: ", fin3-inicio3, "Seconds")
 
 def runSortsNoPrint():
-    A30, A100, A1000 = arrayGen(30), arrayGen(100), arrayGen(1000)
-    n1, n2, n3 = len(A30), len(A100), len(A1000)
+    A10, A100, A1000 = arrayGen(30), arrayGen(100), arrayGen(1000)
+    n1, n2, n3 = len(A10), len(A100), len(A1000)
     inicio30, inicio100, inicio1000 = [], [], []
     fin30, fin100, fin1000 = [], [], []
 
     for i in range(5):
         inicio30.append(time.perf_counter())
-        ar30 = oddEvenSort(A30,n1)
+        oddEvenSort(A10,n1)
         fin30.append(time.perf_counter())
     for i in range(5):
         inicio100.append(time.perf_counter())
-        ar100 = oddEvenSort(A100,n2)
+        oddEvenSort(A100,n2)
         fin100.append(time.perf_counter())
     
     for i in range(5):
         inicio1000.append(time.perf_counter())
-        ar1000 = oddEvenSort(A1000,n3)
+        oddEvenSort(A1000,n3)
         fin1000.append(time.perf_counter())
     
 
